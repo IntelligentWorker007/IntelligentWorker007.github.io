@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        /* 基础样式 - 响应式设计 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* 头部导航 */
+        header {
+            background: #24292e; /* GitHub主题深灰色 */
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        /* 主内容区 */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(120deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            margin-bottom: 2rem;
+        }
+        section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            color: #2575fc;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        /* 技能标签 */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        .skill {
+            background: #eef7ff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* 项目网格 */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .project {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1.2rem;
+            transition: transform 0.3s;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .projects { grid-template-columns: 1fr; }
+        }
+        
+        /* 页脚 */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#projects">项目</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h1>你好，我是[你的名字]</h1>
+            <p>前端开发者 | 开源爱好者 | 技术写作者</p>
+        </section>
+
+        <section id="about">
+            <h2>关于我</h2>
+            <p>这里写一段个人简介，例如：我是一名全栈开发者，专注于构建用户友好的Web应用。热爱开源社区，定期在GitHub分享项目代码和技术解决方案。</p>
+        </section>
+
+        <section id="skills">
+            <h2>技术技能</h2>
+            <div class="skills">
+                <span class="skill">HTML/CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">React</span>
+                <span class="skill">Node.js</span>
+                <span class="skill">Git/GitHub</span>
+                <span class="skill">Python</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>项目展示</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>项目名称一</h3>
+                    <p>项目简要描述，包括技术栈和实现功能。可添加<a href="#">GitHub链接</a></p>
+                </div>
+                <div class="project">
+                    <h3>项目名称二</h3>
+                    <p>项目简要描述，包括技术栈和实现功能。可添加<a href="#">GitHub链接</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>联系方式</h2>
+            <p>📧 邮箱：your.email@example.com</p>
+            <p>💻 GitHub：<a href="https://github.com/yourusername">github.com/yourusername</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 [你的名字] - 个人主页 | 使用GitHub Pages部署</p>
+    </footer>
+</body>
+</html>
